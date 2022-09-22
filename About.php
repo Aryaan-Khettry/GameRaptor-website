@@ -6,9 +6,7 @@
     </head>
     <?php
     session_start(); //starts the session
-    if($_SESSION['user']){ // checks if the user is logged in  
-    }
-    else{
+    if(!$_SESSION['user']) // checks if the user is logged in  
         header("location: index.php"); // redirects if user is not logged in
     }
     $user = $_SESSION['user']; //assigns user value
@@ -17,15 +15,14 @@
         <div class= "container">
             <div class = "navbar">
                 <img src = "img/logo.jpg">
-                <h2>GameRaptor</h2><br>
-                <nav>
-                    <ul>
-                        <li><a href = "Home.php">Home</a></li>
-                        &nbsp;
-                        <li><a href="logout.php">Logout</a><br/></li>
-                        <form action="add.php" method="POST">
-                    </ul>
-                </nav>
+                    <h2>GameRaptor</h2><br>
+                        <nav>
+                            <ul>
+                                <li><a href = "Home.php">Home</a></li>&nbsp;
+                                <li><a href="logout.php">Logout</a><br/></li>
+                                <form action="add.php" method="POST">
+                            </ul>
+                        </nav>
             </div>
             <h3 style = "text-align:center; color:white;">About Us</h3><br>
             <div class = "bodybox">
